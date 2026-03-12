@@ -1,3 +1,5 @@
 # Git
 
-## git log
+Commands:
+- git log
+- git push
