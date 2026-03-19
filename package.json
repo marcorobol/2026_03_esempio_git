@@ -1,0 +1,23 @@
+{
+  "name": "2026_0305-git",
+  "version": "1.0.0",
+  "description": "Commands: - git log - git push - git pull",
+  "homepage": "https://github.com/marcorobol/2026_03_esempio_git#readme",
+  "bugs": {
+    "url": "https://github.com/marcorobol/2026_03_esempio_git/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marcorobol/2026_03_esempio_git.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}
