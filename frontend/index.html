@@ -1,0 +1,45 @@
+<!DOCTYPE html> <!-- HTML5 document -->
+<html> <!-- Root element -->
+    <head>
+        <style>
+            body { /* Element Selector */
+                background-color: lightblue;
+            }
+            a { /* Element Selector */
+                background-color: red;
+            }
+            .borded { /* Class Selector */
+                border: 1px solid red;
+                text-align: center;
+            }
+            a:hover { /* Pseudo-classes Selector */
+                padding-top: 50px;
+                background-color: green;
+            }
+            @media only screen and (max-width: 600px) {
+                body {
+                    background-color: green;
+                    height: 100vh;
+                }
+            }
+        </style>
+        <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.14/dist/full.min.css" rel="stylesheet" type="text/css" />
+        <script src="https://cdn.tailwindcss.com"></script>
+
+    </head> <!-- Meta information about the page -->
+    <body> <!-- Visible content -->
+        <h1 class="text-3xl font-bold hover:text-red-500 underline p-2 mx-auto">
+            Hello world!
+        </h1>
+        <h1 style="color: red; ">EasyLib</h1> <!-- Heading -->
+        <p>Here is the list of books.</p> <!-- Paragraph -->
+        <ul id="books" class="list bg-base-100 rounded-box shadow-md"> <!-- List -->
+            <li class="p-4 pb-2 text-xs opacity-60 tracking-wide"> <!-- List element -->
+                <a href="./api/v1/books/1">Book 1</a> <!-- Hyperlink, the `href` attribute -->
+            </li>
+            <li class="p-4 pb-2 text-xs opacity-60 tracking-wide"> <!-- List element -->
+                <a href="./api/v1/books/2">Book 2</a> <!-- Hyperlink, the `href` attribute -->
+            </li>
+        </ul>
+    </body>
+</html>

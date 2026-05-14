@@ -1,0 +1,48 @@
+<!DOCTYPE html> <!-- HTML5 document -->
+<html> <!-- Root element -->
+    <head>
+        <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.14/dist/full.min.css" rel="stylesheet" type="text/css" />
+        <script src="https://cdn.tailwindcss.com"></script>
+    </head>
+    <body>
+        <div id="app">
+            <h1>
+                <a :href="link+'script.js'">
+                    {{ message }}
+                </a>    
+            </h1>
+            <div v-if="loggedUser">
+                <p>Welcome, {{ loggedUser.name }}!</p>
+            </div>
+            <div v-else>
+                <p>Please log in.</p>
+                <input v-model="username" class="input input-bordered">
+                <input v-model="password" type="password" class="input input-bordered">
+                <button @click="login" class="btn btn-primary"> Login </button>
+            </div>
+        </div>
+        <script type="module">
+            import { createApp, ref } from 'https://unpkg.com/vue@3/dist/vue.esm-browser.js'
+            createApp({ // will later replace setup()
+                setup() { // with the <script setup> syntax
+                    const message = ref('Hello Vue!');
+                    const count = ref(0);
+                    const link ="./";
+                    const text = ref("Hello World");
+                    const username = ref("");
+                    const password = ref("");
+                    const buttonClick = (event) => {
+                        count.value++;
+                        console.log(text.value);
+                    }
+                    const loggedUser = ref(null);
+                    const login = () => {
+                        console.log(username.value, password.value);
+                        loggedUser.value = { name: username.value };
+                    }
+                    return { message, count, link, username, password, buttonClick, login, loggedUser };
+                }
+            }).mount('#app')
+        </script>
+    </body>
+</html>
